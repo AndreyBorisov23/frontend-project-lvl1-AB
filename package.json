@@ -1,0 +1,34 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "brain-games": "src/bin/brain-games.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyBorisov23/frontend-project-lvl1-AB.git"
+  },
+  "author": "Andrey Borisov",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreyBorisov23/frontend-project-lvl1-AB/issues"
+  },
+  "homepage": "https://github.com/AndreyBorisov23/frontend-project-lvl1-AB#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
