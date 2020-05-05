@@ -1,1 +1,2 @@
 # frontend-project-lvl1-AB
+<a href="https://codeclimate.com/github/AndreyBorisov23/frontend-project-lvl1-AB/maintainability"><img src="https://api.codeclimate.com/v1/badges/52f3cf057a41509f2710/maintainability" /></a>
