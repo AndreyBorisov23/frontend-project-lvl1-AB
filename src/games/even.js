@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { generateRandomNumber, isNumberEven } from './utilites.js';
+import { generateRandomNumber, isNumberEven } from '../utilites.js';
 
 const gameEven = () => {
   console.log('Welcome to the Brain Games!');
@@ -15,7 +15,7 @@ const gameEven = () => {
     const num = generateRandomNumber(0, 100);
     const userAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
     if (isNumberEven(num) != userAnswer) {
-      return `${userAnswer} is wrong answer ;(. Correct answer was ${isNumberEven(num)}. Let's try again, ${name}!`;
+      return `${userAnswer} is wrong answer ;(. Correct answer was ${isNumberEven(num)}.\nLet's try again, ${name}!`;
     }
     i += 1;
     console.log('Correct!');

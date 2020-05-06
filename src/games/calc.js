@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { generateRandomNumber, } from './utilites.js';
+import { generateRandomNumber, } from '../utilites.js';
 
 const Tokens = ["+", "-", "*"];
 const miniCalc = (num1, separator, num2) => {
@@ -29,7 +29,7 @@ const gameCalc = () => {
     const result = miniCalc(num1, randomToken, num2);
     const userAnswer = readlineSync.question(`Question: ${num1} ${randomToken} ${num2}\nYour answer: `);
     if (result != userAnswer) {
-      return `${userAnswer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${name}!`;
+      return `${userAnswer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${name}!`;
     }
     i += 1;
     console.log('Correct!');
