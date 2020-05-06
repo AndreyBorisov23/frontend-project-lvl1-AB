@@ -13,8 +13,8 @@ const gameEven = () => {
       return `Congratulations, ${name}!`;
     }
     const num = generateRandomNumber(0, 100);
-    const userAnswer = readlineSync.question(`Question: ${num} `);
-    if (isNumberEven(num) !== userAnswer) {
+    const userAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
+    if (isNumberEven(num) != userAnswer) {
       return `${userAnswer} is wrong answer ;(. Correct answer was ${isNumberEven(num)}. Let's try again, ${name}!`;
     }
     i += 1;
