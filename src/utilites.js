@@ -31,8 +31,8 @@ const progression = (start, length, index) => {
 };
 
 const isPrime = (num) => {
-  if (num < 2) {
-    return 'no';
+  if (num === 1) {
+    return 'yes';
   }
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
