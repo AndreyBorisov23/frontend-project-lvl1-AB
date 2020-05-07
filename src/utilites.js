@@ -10,11 +10,14 @@ const tokens = ['+', '-', '*'];
 const miniCalc = (num1, separator, num2) => {
   if (separator === '+') {
     return num1 + num2;
-  } else if (separator === '-') {
+  }
+  if (separator === '-') {
     return num1 - num2;
-  } else {
+  }
+  if (separator === '*') {
     return num1 * num2;
   }
+  return null;
 };
 
 const getDivisor = (value1, value2) => (
