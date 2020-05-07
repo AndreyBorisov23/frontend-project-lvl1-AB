@@ -6,4 +6,24 @@ const isNumberEven = (num) => {
   return 'no';
 };
 
-export { generateRandomNumber, isNumberEven };
+const tokens = ['+', '-', '*'];
+const miniCalc = (num1, separator, num2) => {
+  if (separator === '+') {
+    return num1 + num2;
+  } else if (separator === '-') {
+    return num1 - num2;
+  }
+  return num1 * num2;
+};
+
+const getDivisor = (value1, value2) => (
+  (value1 % value2) ? getDivisor(value2, value1 % value2) : Math.abs(value2)
+);
+
+export {
+  generateRandomNumber,
+  isNumberEven,
+  tokens,
+  miniCalc,
+  getDivisor,
+};

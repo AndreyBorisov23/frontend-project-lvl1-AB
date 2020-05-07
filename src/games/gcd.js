@@ -1,22 +1,20 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { generateRandomNumber, tokens, miniCalc } from '../utilites.js';
+import { generateRandomNumber, getDivisor } from '../utilites.js';
 
-
-const gameCalc = () => {
+const gameGcd = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log('What is the result of the expression?.');
+  console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i <= 3;) {
     if (i === 3) {
       return `Congratulations, ${name}!`;
     }
-    const num1 = generateRandomNumber(0, 20);
-    const num2 = generateRandomNumber(0, 20);
-    const randomToken = tokens[generateRandomNumber(0, 2)];
-    const result = miniCalc(num1, randomToken, num2);
-    const userAnswer = readlineSync.question(`Question: ${num1} ${randomToken} ${num2}\nYour answer: `);
+    const num1 = generateRandomNumber(2, 20);
+    const num2 = generateRandomNumber(2, 20);
+    const result = getDivisor(num1, num2);
+    const userAnswer = readlineSync.question(`Question: ${num1} ${num2}\nYour answer: `);
     if (result !== Number(userAnswer)) {
       return `${userAnswer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${name}!`;
     }
@@ -25,4 +23,4 @@ const gameCalc = () => {
   }
   return null;
 };
-export default gameCalc;
+export default gameGcd;
