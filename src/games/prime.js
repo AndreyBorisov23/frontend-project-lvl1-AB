@@ -11,7 +11,7 @@ const gamePrime = () => {
     if (i === 3) {
       return `Congratulations, ${name}!`;
     }
-    const num = generateRandomNumber(1, 100);
+    const num = generateRandomNumber(3, 100);
     const result = isPrime(num);
     const userAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
     if (result !== userAnswer) {
