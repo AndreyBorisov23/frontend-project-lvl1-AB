@@ -20,10 +20,20 @@ const getDivisor = (value1, value2) => (
   (value1 % value2) ? getDivisor(value2, value1 % value2) : Math.abs(value2)
 );
 
+const progression = (start, length, index) => {
+  let result = '';
+  for (let i = 0; i < length; i += 1) {
+    result = i === index ? `${result} ..` : `${result} ${start + i}`;
+  }
+
+  return result;
+};
+
 export {
   generateRandomNumber,
   isNumberEven,
   tokens,
   miniCalc,
   getDivisor,
+  progression,
 };
