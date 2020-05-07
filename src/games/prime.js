@@ -7,8 +7,9 @@ const gamePrime = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  for (let i = 0; i <= 3;) {
-    if (i === 3) {
+  const testLenght = 3;
+  for (let i = 0; i <= testLenght;) {
+    if (i === testLenght) {
       return `Congratulations, ${name}!`;
     }
     const num = generateRandomNumber(1, 100);
