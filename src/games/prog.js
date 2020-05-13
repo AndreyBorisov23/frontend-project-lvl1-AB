@@ -1,29 +1,24 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import { generateRandomNumber, progression } from '../utilites.js';
+import { generateRandomNumber, packTheData } from '../utilites.js';
+import brainGames from '../index.js';
+
+const progression = (start, length, index) => {
+  let result = '';
+  for (let i = 0; i < length; i += 1) {
+    result = i === index ? `${result} ..` : `${result} ${start + i}`;
+  }
+
+  return result;
+};
+
+const mission = 'What number is missing in the progression?';
 
 const gameProg = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log('What number is missing in the progression?');
-  const testLenght = 3;
-  for (let i = 0; i <= testLenght;) {
-    if (i === testLenght) {
-      return `Congratulations, ${name}!`;
-    }
-    const index = generateRandomNumber(1, 9);
-    const progStart = 1;
-    const progLength = 10;
-    const result = progression(progStart, progLength, index);
-    const realAnswer = (progStart + 1 * index);
-    const userAnswer = readlineSync.question(`Question: ${result}\nYour answer: `);
-    if (realAnswer !== Number(userAnswer)) {
-      return `${userAnswer} is wrong answer ;(. Correct answer was ${realAnswer}.\nLet's try again, ${name}!`;
-    }
-    i += 1;
-    console.log('Correct!');
-  }
-  return null;
+  const index = generateRandomNumber(1, 9);
+  const progStart = 1;
+  const progLength = 10;
+  const quastion = progression(progStart, progLength, index);
+  const answer = (progStart + 1 * index).toString();
+  return packTheData(quastion, answer);
 };
-export default gameProg;
+export default () => brainGames(mission, gameProg);
