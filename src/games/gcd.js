@@ -1,4 +1,3 @@
-#!/usr/bin/env node;
 import { generateRandomNumber, packTheData } from '../utilites.js';
 import brainGames from '../index.js';
 

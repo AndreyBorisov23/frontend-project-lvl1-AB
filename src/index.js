@@ -1,7 +1,5 @@
 import readlineSync from 'readline-sync';
-
-const getQuestion = (object) => object[0];
-const getAnswer = (object) => object[1];
+import { getQuestion, getAnswer } from './utilites.js';
 
 const brainGames = (mission, getAnswerOrQuastion) => {
   console.log('Welcome to the Brain Games!');

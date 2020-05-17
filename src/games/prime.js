@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { generateRandomNumber, packTheData } from '../utilites.js';
 import brainGames from '../index.js';
 
@@ -6,8 +5,8 @@ const isPrime = (num) => {
   if (num === 1) {
     return true;
   }
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) {
+  for (let i = 2; i < num / 2; i += 1) {
+    if (num % i === 0 || num <= 0) {
       return false;
     }
   }
