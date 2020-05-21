@@ -1,4 +1,4 @@
-import { generateRandomNumber, packTheData } from '../utilites.js';
+import { generateRandomNumber, packData } from '../utilites.js';
 import brainGames from '../index.js';
 
 const makeQuestion = (start, length, index) => {
@@ -7,17 +7,17 @@ const makeQuestion = (start, length, index) => {
     result = i === index ? `${result}.. ` : `${result}${start + i} `;
   }
 
-  return result;
+  return result.slice(0, -1);
 };
 
 const mission = 'What number is missing in the progression?';
 
-const gameProg = () => {
-  const progStart = 1;
-  const progLength = 10;
-  const index = generateRandomNumber(progStart, progLength - 1);
-  const quastion = makeQuestion(progStart, progLength, index);
-  const answer = (progStart + 1 * index).toString();
-  return packTheData(quastion, answer);
+const makeGameRound = () => {
+  const progressionStart = 1;
+  const progressionLength = 10;
+  const index = generateRandomNumber(progressionStart, progressionLength - 1);
+  const quastion = makeQuestion(progressionStart, progressionLength, index);
+  const answer = (progressionStart + 1 * index).toString();
+  return packData(quastion, answer);
 };
-export default () => brainGames(mission, gameProg);
+export default () => brainGames(mission, makeGameRound);

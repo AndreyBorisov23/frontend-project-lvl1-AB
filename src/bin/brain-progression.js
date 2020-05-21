@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import gameProg from '../games/prog.js';
+import makeGameRound from '../games/prog.js';
 
-gameProg();
+makeGameRound();

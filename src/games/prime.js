@@ -1,12 +1,12 @@
-import { generateRandomNumber, packTheData } from '../utilites.js';
+import { generateRandomNumber, packData } from '../utilites.js';
 import brainGames from '../index.js';
 
 const isPrime = (num) => {
-  if (num === 1) {
-    return true;
+  if (num <= 1) {
+    return false;
   }
   for (let i = 2; i < num / 2; i += 1) {
-    if (num % i === 0 || num <= 0) {
+    if (num % i === 0) {
       return false;
     }
   }
@@ -15,9 +15,9 @@ const isPrime = (num) => {
 
 const mission = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const gamePrime = () => {
+const makeGameRound = () => {
   const quastion = generateRandomNumber(1, 100);
   const answer = isPrime(quastion) ? 'yes' : 'no';
-  return packTheData(quastion, answer);
+  return packData(quastion, answer);
 };
-export default () => brainGames(mission, gamePrime);
+export default () => brainGames(mission, makeGameRound);
