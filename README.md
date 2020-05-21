@@ -3,13 +3,14 @@
 
 ![Node CI](https://github.com/AndreyBorisov23/frontend-project-lvl1-AB/workflows/Node%20CI/badge.svg)
 
-Install
+# Install
 npm link firstproject
 
-Launch
+# Launch
 if you want to launch a game, type the name of the corresponding game in the console:
 brain-even, brain-calc, brain-gcd, brain-progression, brain-prime.
 
+# examples
 Below are examples of running games that end in winning and losing.
 
 brain-even
