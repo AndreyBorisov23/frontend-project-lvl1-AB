@@ -16,8 +16,9 @@ const isPrime = (num) => {
 const mission = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const makeGameRound = () => {
-  const quastion = generateRandomNumber(1, 100);
-  const answer = isPrime(quastion) ? 'yes' : 'no';
-  return packData(quastion, answer);
+  const question = generateRandomNumber(1, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return packData(question, answer);
 };
+
 export default () => brainGames(mission, makeGameRound);

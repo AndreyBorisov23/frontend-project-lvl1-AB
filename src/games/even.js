@@ -11,8 +11,9 @@ const isEven = (num) => {
 const mission = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const makeGameRound = () => {
-  const quastion = generateRandomNumber(0, 100);
-  const answer = isEven(quastion) ? 'yes' : 'no';
-  return packData(quastion, answer);
+  const question = generateRandomNumber(0, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return packData(question, answer);
 };
+
 export default () => brainGames(mission, makeGameRound);

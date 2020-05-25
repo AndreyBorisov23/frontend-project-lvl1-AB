@@ -7,7 +7,7 @@ const makeQuestion = (start, length, index) => {
     result = i === index ? `${result}.. ` : `${result}${start + i} `;
   }
 
-  return result.slice(0, -1);
+  return result.trim();
 };
 
 const mission = 'What number is missing in the progression?';
@@ -16,8 +16,9 @@ const makeGameRound = () => {
   const progressionStart = 1;
   const progressionLength = 10;
   const index = generateRandomNumber(progressionStart, progressionLength - 1);
-  const quastion = makeQuestion(progressionStart, progressionLength, index);
+  const question = makeQuestion(progressionStart, progressionLength, index);
   const answer = (progressionStart + 1 * index).toString();
-  return packData(quastion, answer);
+  return packData(question, answer);
 };
+
 export default () => brainGames(mission, makeGameRound);

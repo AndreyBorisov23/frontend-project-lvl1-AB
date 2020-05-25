@@ -6,8 +6,8 @@ const brainGames = (mission, getGameData) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(`${mission}`);
-  const roundsCounter = 3;
-  for (let i = 0; i < roundsCounter; i += 1) {
+  const roundsCount = 3;
+  for (let i = 0; i < roundsCount; i += 1) {
     const gameData = getGameData();
     const question = getQuestion(gameData);
     const correctAnswer = getAnswer(gameData);
@@ -22,4 +22,5 @@ const brainGames = (mission, getGameData) => {
   }
   console.log(`Congratulations, ${name}!`);
 };
+
 export default brainGames;
